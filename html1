@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Flow</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            margin: 20px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff3385;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="page1" class="container">
+        <h1>Hello Mam</h1>
+        <p>Please click "Continue" to proceed.</p>
+        <button onclick="goToPage2()">Continue &#8594;</button>
+    </div>
+
+    <div id="page2" class="container hidden">
+        <h1>I really like you</h1>
+        <button onclick="goToPage3()">Aww, malai thaxa kate vanxa hau</button>
+        <p>Please click it.</p>
+    </div>
+
+    <div id="page3" class="container hidden">
+        <h1>Hello Mam,</h1>
+        <p>How are you?</p>
+        <p>It's me, ________ <i>(fill yourself)</i></p>
+        <p>Hai, yo maile tmero lage banaudai xu hai. I mean, like malai tme man parxa aru k vanum like this is like monologue kya. Ma aafai feeling vaneyako xu, monologue vaneko eklai bolne ho, testai ho aba tme google gara aba vanxu.</p>
+        <p>Story begins now:</p>
+        <p>Hai like tmelai Maile first xote dhekhdha notice gareko thiyena tara 1 din like i see you, Matlab pahela ne dhekheko thiye. Like mero man ma halchal vayo pane paryo tmelai dhekhne bitikai vana ta man thiyo tara k garum yesto vayena. Like tme kasto cutee dhekheko thiyau chau pane ahele thaxa maile god lai wish gareko thiye. Tmelai dhekhne bitikai sorry la ma k k vaneyako xu la aba continue click gara boring vayo hola.</p>
+        <button onclick="goToPage4()">Continue &#8594;</button>
+    </div>
+
+    <div id="page4" class="container hidden">
+        <h1>Tmero bf xa ke xaina?</h1>
+        <p>Feri yetro banaeyako bf xa re vaye pane kahe hudaina tara navaye hunthiyo. Aba click gara.</p>
+        <button onclick="showYesNo()">Yes</button>
+        <button onclick="showYesNo()">No</button>
+    </div>
+
+    <div id="popup" class="hidden">
+        <p>Sachi xaina ho?</p>
+        <button onclick="goToPage5()">Yes1</button>
+        <button onclick="goToPage5()">No2</button>
+    </div>
+
+    <div id="page5" class="container hidden">
+        <h1>OMG, 2 months lagayera varkhar yete vayo!</h1>
+        <p>Launa kahe le sakinxa hau? Aba yete gardha, please bola la ma sanga.</p>
+        <p>Aba yo complete xaina, yete ho. Arko pali complete garxu, demag hang vayo.</p>
+        <button onclick="goToPage6()">Continue &#8594;</button>
+    </div>
+
+    <div id="page6" class="container hidden">
+        <h1>Warning ⛔️</h1>
+        <p>Please kasailai ne navana la yo chai, please cell lai ne navana la please.</p>
+        <p>Ani sorry la.</p>
+    </div>
+
+    <script>
+        function goToPage2() {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+        }
+
+        function goToPage3() {
+            document.getElementById('page2').classList.add('hidden');
+            document.getElementById('page3').classList.remove('hidden');
+        }
+
+        function goToPage4() {
+            document.getElementById('page3').classList.add('hidden');
+            document.getElementById('page4').classList.remove('hidden');
+        }
+
+        function showYesNo() {
+            document.getElementById('page4').classList.add('hidden');
+            document.getElementById('popup').classList.remove('hidden');
+        }
+
+        function goToPage5() {
+            document.getElementById('popup').classList.add('hidden');
+            document.getElementById('page5').classList.remove('hidden');
+        }
+
+        function goToPage6() {
+            document.getElementById('page5').classList.add('hidden');
+            document.getElementById('page6').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
